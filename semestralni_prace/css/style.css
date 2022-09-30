@@ -3,9 +3,9 @@
     padding: 0;
 }
 .header {
-    min-height: 100vh;
+    min-height: 8vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)      );
+    background-color: #04091EB2;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -49,14 +49,23 @@ nav img{
     width: 100%;
 }
 .text-box{
+    min-height: 55vh;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20vh;
+
+   /* display: block;
+
+    min-height: 40vh;
     font-family: sans-serif;
     width: 90%;
-    color: white;
-    position: absolute;
-    top: 20%;
-    left: 50%;
+    color: black;
+      left: 50%;
     transform: translate(-50%,50%);
     text-align: center;
+    background-size: cover;
+    position: relative;
+*/
 
 }
 .text-box h1{
@@ -65,9 +74,16 @@ nav img{
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: white;
+    color: black;
 }
 .hero-btn{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    font-size: 16px;
+    padding: 12px 34px;
+    background: transparent;
+    /*
     display: inline-block;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -77,6 +93,7 @@ nav img{
     background: transparent;
     position: relative;
     cursor: pointer;
+    */
 }
 .hero-btn:hover{
     border: 1px solid black;
@@ -120,14 +137,10 @@ nav .fa{
     }
 }
 .info{
-    width: 90%;
+    width: 60%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    font-family: sans-serif;
-    border-width: 120px;
-    border-image-width: 120%;
-    background-size: cover;
     position: relative;
 
 
@@ -145,24 +158,34 @@ p{
     padding: 10px;
 }
 .row{
-    margin-top: 5%;
+
     display: flex;
     justify-content: space-between;
 }
 .info-col{
-    flex-basis: 31%;
-    background: #f44336;
+    flex-basis: 42%;
+    background-color: #f44336;
     border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 50px 12px;
+    margin-bottom: 10%;
+    padding: 100px 12px;
     box-sizing: border-box;
+    cursor: pointer;
     transition: 0.5s;
+
+
 }
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
+
+.info-col h3{
+    font-family: sans-serif;
+    color: white;
+
 }
+
+
+
+
+
+
 .info-col:hover{
     box-shadow: 0 0 30px 0px rgba(0,0,0,0.5);
 }
@@ -173,7 +196,7 @@ h3{
 
 }
 
-.galery{
+.char{
     width: 80%;
     margin: auto;
     text-align: center;
@@ -182,19 +205,20 @@ h3{
     color: Black;
 
 }
-.galery-col{
+.char-col{
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-
+    cursor: pointer;
 
 }
-.galery-col img{
+.char-col img{
     width: 100%;
     height: 100%;
     display: block;
+
 
 
 }

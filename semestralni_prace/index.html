@@ -18,16 +18,15 @@
                 <li><a href="poster.html">POSTER</a></li>
                 <li><a href="testPage.html">TESTPAGE</a></li>
                 <li><a href="#waifus">WAIFUS</a></li>
-
             </ul>
-
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-
-    <div class="text-box">
+    <!---------------------TextBox--------------------->
+</section>
+<section class="text-box">
+     <div class="text-box">
         <h1>Important text</h1>
-
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim<br>
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut<br>
@@ -37,54 +36,39 @@
             officia deserunt mollit anim id est laborum."</p>
         <a href="testPage.html" class="hero-btn"><strong>Visit us for more</strong></a>
     </div>
-
 </section>
 <!---------------------INFO--------------------->
 <section class="info">
-    <h1>Informations</h1>
-    <p>"Lorem ipsum dolor sit amet"</p>
-    <div class="row">
-        <div class="info-col">
-            <h3>Contact</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
-                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        </div>
-        <div class="info-col">
-            <h3>Second</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
-                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        </div>
-        <div class="info-col">
-            <h3>Third</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
-                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        </div>
-    </div>
 
+     <div class="row">
+         <a href="testPage.html" class="info-col"> <div>
+                       <h3 style="text-decoration: none">Contact</h3>
+        </div></a>
+         <a href="testPage.html" class="info-col"> <div>
+            <h3>About</h3>
+        </div></a>
+     </div>
 </section>
-
 <!---------------------Galery--------------------->
-
-<section class="galery">
-    <h1>Galery</h1>
-    <p>"Lorem ipsum dolor sit amet"</p>
+<section class="char">
+    <h1>Characters</h1>
     <div class="row">
-        <div class="galery-col">
-            <img src="./pictures/lucy9.png">
+        <div class="char-col">
+            <a href="testPage.html"><img src="./pictures/lucy9.png"></a>
             <div class="layer">
                 <h3>LUCY</h3>
             </div>
         </div>
-        <div class="galery-col">
-            <img src="./pictures/albedo.jpg">
+        <div class="char-col">
+            <a href="testPage.html"><img src="./pictures/albedo.jpg"></a>
             <div class="layer">
                 <h3>ALBEDO</h3>
             </div>
         </div>
-        <div class="galery-col">
-            <img src="./pictures/zero2.png">
+         <div class="char-col">
+            <a href="testPage.html"> <img src="./pictures/zero2.png"></a>
             <div class="layer">
-                <h3>ZERO2</h3>
+                <a href="testPage.html"> <h3>ZERO2</h3></a>
             </div>
         </div>
 
@@ -113,9 +97,7 @@
             <p>"Lorem ipsum dolor sit amet"</p>
         </div>
     </div>
-
     <!---------------------ENDP--------------------->
-
 </section>
 <section class="endP">
     <h4>About Us</h4>
@@ -126,10 +108,7 @@
         <i class="fa fa-twitter"></i>
     </div>
 </section>
-
-
-
-<<script>
+<script>
     var navLinks = document.getElementById("navLinks");
     function showMenu(){
         navLinks.style.right = "0";
@@ -137,9 +116,6 @@
     function hideMenu(){
         navLinks.style.right = "-200px";
     }
-
-
-
 </script>
 </body>
 </html>
