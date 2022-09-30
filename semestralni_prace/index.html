@@ -7,6 +7,139 @@
     <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
     </head>
 <body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="./pictures/Cyberpunk_Edgerunners_logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Main2.html">SECOND</a></li>
+                <li><a href="poster.html">POSTER</a></li>
+                <li><a href="testPage.html">TESTPAGE</a></li>
+                <li><a href="#waifus">WAIFUS</a></li>
 
+            </ul>
+
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Important text</h1>
+
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim<br>
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut<br>
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br>
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br>
+            officia deserunt mollit anim id est laborum."</p>
+        <a href="testPage.html" class="hero-btn"><strong>Visit us for more</strong></a>
+    </div>
+
+</section>
+<!---------------------INFO--------------------->
+<section class="info">
+    <h1>Informations</h1>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <div class="row">
+        <div class="info-col">
+            <h3>Contact</h3>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+        </div>
+        <div class="info-col">
+            <h3>Second</h3>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+        </div>
+        <div class="info-col">
+            <h3>Third</h3>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+        </div>
+    </div>
+
+</section>
+
+<!---------------------Galery--------------------->
+
+<section class="galery">
+    <h1>Galery</h1>
+    <p>"Lorem ipsum dolor sit amet"</p>
+    <div class="row">
+        <div class="galery-col">
+            <img src="./pictures/lucy9.png">
+            <div class="layer">
+                <h3>LUCY</h3>
+            </div>
+        </div>
+        <div class="galery-col">
+            <img src="./pictures/albedo.jpg">
+            <div class="layer">
+                <h3>ALBEDO</h3>
+            </div>
+        </div>
+        <div class="galery-col">
+            <img src="./pictures/zero2.png">
+            <div class="layer">
+                <h3>ZERO2</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!---------------------Waifus--------------------->
+<section class="waifus" id="waifus">
+    <h1>Waifus</h1>
+    <p>"Lorem ipsum dolor sit amet"</p>
+
+    <div class="row">
+        <div class="waifus-col">
+            <a href="lucy.html"><img src="./pictures/lucy_waifu.png"></a>
+            <h3>LUCY</h3>
+            <p>"Lorem ipsum dolor sit amet"</p>
+        </div>
+        <div class="waifus-col">
+            <a href="ichika.html"> <img src="./pictures/ichika_waifu.png"></a>
+            <h3>ICHIKA</h3>
+            <p>"Lorem ipsum dolor sit amet"</p>
+        </div>
+        <div class="waifus-col">
+            <a href="albedo.html"><img src="./pictures/albedo_waifu.png"></a>
+            <h3>ALBEDO</h3>
+            <p>"Lorem ipsum dolor sit amet"</p>
+        </div>
+    </div>
+
+    <!---------------------ENDP--------------------->
+
+</section>
+<section class="endP">
+    <h4>About Us</h4>
+    <p class="endP">"Lorem ipsum dolor sit amet"</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+    </div>
+</section>
+
+
+
+<<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+
+
+</script>
 </body>
 </html>
