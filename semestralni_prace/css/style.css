@@ -83,7 +83,7 @@ nav .fa{
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     .text-box h1{
         font-size: 20px;
     }
@@ -174,7 +174,7 @@ p{
 .info-col:hover{
     box-shadow: 0 0 30px 0px rgba(0,0,0,0.5);
 }
-@media(max-width:700px){
+@media(max-width:800px){
     .row{
         flex-direction: column;
     }
@@ -246,7 +246,10 @@ p{
     padding-top: 100px;
     font-family: sans-serif;
 }
-
+.waifus h1{
+    margin-bottom: 10vh;
+    margin-top: -20vh;
+}
 .waifus-col{
     flex-basis: 31%;
     border-radius: 10px;
@@ -295,4 +298,63 @@ p{
     margin: 0 4px;
     cursor: pointer;
     padding: 18px 0;
+}
+.container{
+
+    display:flex;
+    flex-flow: row nowrap;
+    background-color: rgba(255,179,208,0.6);
+}
+
+
+.container h2{
+    text-align: center;
+
+}
+.container main p{
+    text-align: left;
+
+    padding: 0 20px;
+}
+.container main{
+
+    display: flex;
+    flex-flow:column nowrap;
+    flex:4;
+
+}
+.container aside{
+    display:flex;
+
+    padding: 2rem;
+    background-color: white;
+
+    flex-flow:column nowrap;
+    flex:1;
+
+}
+.container aside section {
+
+    display: block;
+    margin: 0 auto;
+}
+.container aside img{
+    display: block;
+    border-radius: 10%;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    margin: 0 auto;
+}
+.container aside li{
+    color: #000000;
+}
+
+
+@media(max-width: 800px) {
+    .container {
+        flex-flow: column-reverse nowrap;
+    }
+    .container main p{
+        text-align: center;
+    }
 }
