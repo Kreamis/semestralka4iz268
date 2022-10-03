@@ -171,6 +171,7 @@ p{
     box-sizing: border-box;
     cursor: pointer;
     transition: 0.5s;
+    text-decoration: none;
 
 
 }
@@ -223,6 +224,7 @@ p{
 
 }
 .layer{
+    display: inline;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -243,7 +245,6 @@ p{
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-
 }
 .layer:hover h3{
     bottom: 49%;
@@ -251,7 +252,6 @@ p{
     transition: 0.5s;
 
 }
-
 .waifus{
     width: 80%;
     margin: auto;
