@@ -296,9 +296,10 @@ p{
 }
 .icons .fa{
     color: #f44336;
-    margin: 0 4px;
+    margin: 0 20px;
     cursor: pointer;
     padding: 10px 0;
+    font-size: 20px;
 
 }
 .container{
