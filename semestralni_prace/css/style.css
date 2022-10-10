@@ -302,11 +302,43 @@ p{
     font-size: 20px;
 
 }
+.title {
+    text-align: center;
+    margin: 2vh 0;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+table.asideTable {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table.asideTable td, table.asideTable th {
+    border-bottom: 2px solid #000000;
+    padding: 10px;
+
+}
+
+table.asideTable th {
+    text-align: left;
+    font-weight: bold;
+
+}
+
+table.asideTable td {
+    text-align: right;
+    font-weight: normal;
+
+}
+
 .container{
 
     display:flex;
     flex-flow: row nowrap;
     background-color: rgba(255, 255, 255, 0.6);
+
 }
 
 
@@ -359,13 +391,15 @@ p{
 }
 .container main ul {
     width: 25%;
-
+    display: flex;
     border: 1px solid #a2a9b1;
     background-color: #f8f9fa;
    padding: 10px;
     margin-left: 5vh;
     flex-direction: column;
     font-family: sans-serif;
+    text-align: center;
+    margin-top: 2vh;
 
 
 }
@@ -375,7 +409,7 @@ p{
 .container main ul a{
 
     color: #001844;
-    margin-left: 10vh;
+
     text-decoration: none  !important;
     cursor: pointer;
     font-family: sans-serif;
