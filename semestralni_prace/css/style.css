@@ -52,16 +52,26 @@ nav img{
     min-height: 55vh;
     font-family: sans-serif;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    margin-bottom: -10vh;
 
 }
 .text-box h1{
     font-size: 62px;
 }
 .text-box p{
+    display: block;
+    align-content: center;
+    text-align: center;
     margin: 10px 0 40px;
     font-size: 14px;
+
     color: black;
+    padding-left: 20vh;
+    padding-right: 20vh;
+
+
+
 }
 .hero-btn{
     text-decoration: none;
@@ -185,7 +195,7 @@ p{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20vh;
     font-family: sans-serif;
     color: Black;
     text-decoration: none !important;
@@ -243,12 +253,12 @@ p{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 30px;
     font-family: sans-serif;
 }
 .waifus h1{
     margin-bottom: 10vh;
-    margin-top: -20vh;
+
 }
 .waifus-col{
     flex-basis: 31%;
@@ -301,6 +311,7 @@ p{
     padding: 10px 0;
     font-size: 20px;
 
+
 }
 .title {
     text-align: center;
@@ -345,6 +356,11 @@ table.asideTable td {
 .container h2{
     text-align: center;
     margin-top: 5vh;
+
+}
+.container h5{
+    padding: 10px;
+    font-size: 20px;
 
 }
 .container main p{
@@ -402,7 +418,51 @@ table.asideTable td {
     margin-top: 2vh;
 
 
+
 }
+
+ .about h2{
+     display: block;
+    text-align: center;
+     font-family: sans-serif;
+     font-size: 40px;
+
+
+}
+.contentColumns{
+    padding-top: 5vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    text-align: center;
+
+
+
+
+}
+
+.contentColumns .contentColumn figure{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+
+
+
+}
+.contentColumns .contentColumn .imgC img{
+    border-radius: 60%;
+    width: 50%;
+    margin: auto;
+}
+@media(max-width: 800px) {
+    .contentColumns {
+        flex-flow: column-reverse nowrap;
+    }
+    .contentColumns .contentColumn .imgC img{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
 
 
 
@@ -452,4 +512,5 @@ table.asideTable td {
 
 
     }
+}
 }
