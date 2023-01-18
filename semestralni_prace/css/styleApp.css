@@ -201,26 +201,46 @@ Aplikace
     width: 30%;
 }
 
-.shares{
 
-    width: 20%;
-    height: 20%;
-    margin: auto;
-    border: 2px solid rgb(189, 189, 189);
-    border-radius: 0.75rem;
 
-    padding: 5px;
 
+.social-share-container {
+    display: flex;
+    justify-content: center;
 }
 
-.shares h1{
+.social-share-btn {
+    font-size: 30px;
+    color: #fff;
+    background: #3b5998;
+    padding: 10px 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.social-share-btn:hover {
+    background: #444;
+}
+
+#facebook-share-btn {
+    background: #3b5998;
+}
+
+#twitter-share-btn {
+    background: #1da1f2;
+}
+
+
+
+
+
+.box-text h2{
+    padding: 1vh 10px;
     font-family: sans-serif;
-    margin: auto;
+    text-align: center;
 }
-
-
-
-
 
 
 

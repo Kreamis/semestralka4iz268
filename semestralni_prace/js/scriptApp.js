@@ -127,4 +127,13 @@ class AsciiEffect {
     document.body.removeChild(link);
 });
 
+//Facebook
+document.getElementById('facebook-share-btn').onclick = function() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL);
+}
+
+//Twitter
+document.getElementById('twitter-share-btn').onclick = function() {
+    window.open('https://twitter.com/share?url=' + canvas);
+}
 
