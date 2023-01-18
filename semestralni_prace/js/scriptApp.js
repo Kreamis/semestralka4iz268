@@ -2,7 +2,6 @@ var canvas = document.getElementById("canvas1");
 var ctx = canvas.getContext("2d");
 
 
-
 var image1 = new Image();
 image1.src ="pictures/smallLucy.jpg";
 
@@ -42,19 +41,19 @@ class AsciiEffect {
         console.log(this.#pixels)
     }
     #convertToSymbol(g){
-        if(g>250) return '@';
-        else if (g<240) return '*';
-        else if (g<220) return '+';
-        else if (g<200) return '#';
-        else if (g<180) return '&';
-        else if (g<160) return '%';
-        else if (g<140) return '_';
-        else if (g<120) return ':';
-        else if (g<100) return '$';
-        else if (g<80) return '/';
-        else if (g<60) return '-';
-        else if (g<40) return 'X';
-        else if (g<20) return 'W';
+        if(g<250) return '@';
+        else if (g>240) return '*';
+        else if (g>220) return '+';
+        else if (g>200) return '#';
+        else if (g>180) return '&';
+        else if (g>160) return '%';
+        else if (g>140) return '_';
+        else if (g>120) return ':';
+        else if (g>100) return '$';
+        else if (g>80) return '/';
+        else if (g>60) return '-';
+        else if (g>40) return 'X';
+        else if (g>20) return 'W';
         else return '';
 
     }
@@ -117,3 +116,15 @@ class AsciiEffect {
         effect = new AsciiEffect(ctx, image1.width, image1.height);
         handleSlider()
     }
+    var button = document.getElementById("download-button");
+    button.addEventListener("click", function() {
+    var dataURL = canvas.toDataURL("image/png");
+    var link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "AsciiArtImage.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+
