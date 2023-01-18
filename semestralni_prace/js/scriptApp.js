@@ -1,23 +1,14 @@
-var canvas = document.getElementById("canvas1");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas1");
+const ctx = canvas.getContext("2d");
 
-
-var image1 = new Image();
-image1.src ="pictures/smallLucy.jpg";
-
-const inputSlider = document.getElementById('resolution');
-const inputLabel = document.getElementById('resolutionLabel');
-inputSlider.addEventListener('change', handleSlider);
-
-
-class Cell{
+class Cell {
     constructor(x, y, symbol, color) {
         this.x = x;
         this.y = y;
         this.symbol = symbol;
         this.color = color;
     }
-    draw(ctx){
+    draw(ctx) {
         ctx.fillStyle = this.color;
         ctx.fillText(this.symbol, this.x, this.y)
     }
@@ -25,99 +16,125 @@ class Cell{
 
 
 class AsciiEffect {
-    #imageCellArray = [];
+    _imageCellArray = [];
 
-    #pixels = [];
-    #ctx;
-    #width;
-    #height;
+    _pixels = [];
+    _ctx;
+    _width;
+    _height;
+    _image;
 
-    constructor(ctx, width, height) {
-        this.#ctx = ctx;
-        this.#height = height;
-        this.#width = width;
-        this.#ctx.drawImage(image1, 0, 0, this.#width, this.#height)
-        this.#pixels = this.#ctx.getImageData(0, 0, this.#width, this.#height);
-        console.log(this.#pixels)
-    }
-    #convertToSymbol(g){
-        if(g<250) return '@';
-        else if (g>240) return '*';
-        else if (g>220) return '+';
-        else if (g>200) return '#';
-        else if (g>180) return '&';
-        else if (g>160) return '%';
-        else if (g>140) return '_';
-        else if (g>120) return ':';
-        else if (g>100) return '$';
-        else if (g>80) return '/';
-        else if (g>60) return '-';
-        else if (g>40) return 'X';
-        else if (g>20) return 'W';
-        else return '';
-
+    constructor(ctx, image) {
+        this._ctx = ctx;
+        this._height = canvas.height;
+        this._width = canvas.width;
+        this._ctx.drawImage(image, 0, 0, this._width, this._height)
+        this._pixels = this._ctx.getImageData(0, 0, this._width, this._height);
+        this._image = image;
+        console.log(this._pixels)
     }
 
-    #scanImage(cellSize){
-        this.#imageCellArray = [];
-        for(let y=0;y<this.#pixels.height;y += cellSize){
-            for (let x=0; x<this.#pixels.width; x += cellSize){
+    _convertToSymbol(g) {
+        return g < 250 ? "@" : "*";
+    }
+
+    _scanImage(cellSize) {
+        this._imageCellArray = [];
+        for (let y = 0; y < this._pixels.height; y += cellSize) {
+            for (let x = 0; x < this._pixels.width; x += cellSize) {
                 const posX = x * 4;
                 const posY = y * 4;
-                const pos = (posY * this.#pixels.width) + posX;
+                const pos = (posY * this._pixels.width) + posX;
 
-                if (this.#pixels.data[pos +3] > 128){
-                    const red = this.#pixels.data[pos];
-                    const green = this.#pixels.data[pos + 1];
-                    const blue = this.#pixels.data[pos + 2];
+                if (this._pixels.data[pos + 3] > 128) {
+                    const red = this._pixels.data[pos];
+                    const green = this._pixels.data[pos + 1];
+                    const blue = this._pixels.data[pos + 2];
                     const total = red + green + blue;
-                    const averageColorValue = total/3;
+                    const averageColorValue = total / 3;
                     const color = "rgb(" + red + "," + green + "," + blue + ")"
-                    const symbol = this.#convertToSymbol(averageColorValue)
-                    if(total>200)this.#imageCellArray.push(new Cell(x, y, symbol, color));
+                    const symbol = this._convertToSymbol(averageColorValue)
+                    if (total > 200) this._imageCellArray.push(new Cell(x, y, symbol, color));
 
 
                 }
             }
         }
-        console.log(this.#imageCellArray);
+        console.log(this._imageCellArray);
 
     }
-    #drawAscii(){
-        this.#ctx.clearRect(0, 0, this.#width, this.#height)
-        for(let i =0; i <this.#imageCellArray.length; i++){
-            this.#imageCellArray[i].draw(this.#ctx);
+    _drawAscii() {
+        this._ctx.clearRect(0, 0, this._width, this._height)
+        for (let i = 0; i < this._imageCellArray.length; i++) {
+            this._imageCellArray[i].draw(this._ctx);
         }
     }
-    draw(cellSize){
-        this.#scanImage(cellSize);
-        this.#drawAscii()
+    draw(cellSize) {
+        this._scanImage(cellSize);
+        this._drawAscii()
     }
 }
-    let effect;
 
-    function handleSlider(){
-        if(inputSlider.value == 1){
-            inputLabel.innerHTML = 'Original image';
-            ctx.drawImage(image1, 0, 0 , canvas.width, canvas.height);
-        } else {
-            ctx.font = parseInt(inputSlider.value) *1.2 + 'px Verdana';
-            inputLabel.innerHTML = 'Resolution '+ inputSlider.value + ' px';
-            effect.draw(parseInt(inputSlider.value));
+function handleSlider(effect, inputSlider, inputLabel) {
+    if (inputSlider.value == 1) {
+        inputLabel.innerHTML = 'Original image';
+        ctx.drawImage(effect._image, 0, 0, canvas.width, canvas.height);
+    } else {
+        ctx.font = parseInt(inputSlider.value) * 1.2 + 'px Verdana';
+        inputLabel.innerHTML = 'Resolution ' + inputSlider.value + ' px';
+        effect.draw(parseInt(inputSlider.value));
+    }
+}
 
+
+const fileInput = document.getElementById("fileInput");
+
+fileInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+
+    if (file.size > 5_000_000)  {
+        window.alert("File too big 😩");
+        return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+        window.alert("File is not an image 😩");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function () {
+        const image = new Image();
+        const size = 500;
+
+        image.src = reader.result;
+        image.onload = function () {
+            if (image.width >= image.height) {
+                canvas.width = size;
+                canvas.height = size * (image.height / image.width);
+            }
+            else {
+
+                canvas.height = size;
+                canvas.width = size * (image.width / image.height);
+            }
+
+            const effect = new AsciiEffect(ctx, image);
+            const inputSlider = document.getElementById('resolution');
+            const inputLabel = document.getElementById('resolutionLabel');
+
+
+            handleSlider(effect, inputSlider, inputLabel);
+            inputSlider.addEventListener("change", () => handleSlider(effect, inputSlider, inputLabel));
         }
     }
 
+    reader.readAsDataURL(file);
+});
 
-
-    image1.onload = function initialize(){
-        canvas.width = image1.width;
-        canvas.height = image1.height;
-        effect = new AsciiEffect(ctx, image1.width, image1.height);
-        handleSlider()
-    }
-    var button = document.getElementById("download-button");
-    button.addEventListener("click", function() {
+var button = document.getElementById("download-button");
+button.addEventListener("click", function () {
     var dataURL = canvas.toDataURL("image/png");
     var link = document.createElement("a");
     link.href = dataURL;
@@ -127,13 +144,21 @@ class AsciiEffect {
     document.body.removeChild(link);
 });
 
+
+const upload = (canvas, onUpload) => {
+    canvas.toBlob(blob => {
+        const form = new FormData();
+        const file = new File([blob], "image.png");
+
+        form.append("file", file);
+
+        fetch("https://api.file.coffee/file/upload", { method: "post", body: form })
+            .then(response => response.json())
+            .then(response => onUpload(response.url));
+    });
+}
+
 //Facebook
-document.getElementById('facebook-share-btn').onclick = function() {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL);
+document.getElementById('facebook-share-btn').onclick = function () {
+    upload(canvas, (link) => window.open("https://www.facebook.com/sharer/sharer.php?u=" + link));
 }
-
-//Twitter
-document.getElementById('twitter-share-btn').onclick = function() {
-    window.open('https://twitter.com/share?url=' + canvas);
-}
-
