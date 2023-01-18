@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgToASCII</title>
+    <link  rel="stylesheet" href="./css/styleApp.css">
+    <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="header">
+    <nav>
+        <a href="index.html"><img src="./pictures/Nadpis.png" alt="semikFanPage"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aplikace.html">ImgToASCII</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</div>
+<!---------------------Aplikace--------------------->
+
+
+<div class="container">
+    <div class="box-main">
+        <div class="box-text">
+        <canvas id="canvas1" width="10vh" height="20vh"></canvas>
+    </div>
+    </div>
+    <div class="box-minor">
+
+
+        <div class="controls">
+
+            <label for="resolution" id="resolutionLabel">Resolution 5px</label>
+            <input type="range" id="resolution" name="resolution" min="1" max="20" value="5">
+
+
+         </div>
+    </div>
+</div>
+<script src="js/scriptApp.js"></script>
+
+<!---------------------ENDP--------------------->
+<div class="endP">
+    <a href="about.html" class="endP"><h4>About Us</h4></a>
+    <div class="icons">
+        <a target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://www.instagram.com/"> <i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://discord.com/"> <i class="fa fa-brands fa-discord"></i></a>
+    </div>
+</div>
+<script>
+    let navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

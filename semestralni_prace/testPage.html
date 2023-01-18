@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>ImgToASCII</title>
+    <link  rel="stylesheet" href="./css/styleApp2.css">
+    <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
+    <script src="js/scriptApp.js"></script>
 </head>
 <body>
-<h1>This is test page for testing links</h1>
+<div class="container">
+
+    <div class="box-main">
+
+        <div id="imageContainer">
+
+            <img id="previewImage" style="display: none;">
+        </div>
+    </div>
+
+
+    <div class="box-minor">
+        <div class="box-text" >
+            <h1>Něco důležitého</h1>
+            <input type="file" id="fileInput">
+            <button id="previewButton" onclick="previewImage()">Preview Image</button>
+
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
