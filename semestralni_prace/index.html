@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Hlavní stránka">
+    <meta name="author" content="Michal Ševčík">
     <title>FanPage</title>
-    <link  rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="print" href="./css/stylePrint.css">
+    <link rel="icon" type="image/png" href="./pictures/logo.png">
     <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
-    </head>
+</head>
 <body>
-<section class="header">
+<header>
     <nav>
         <a href="index.html"><img src="./pictures/Nadpis.png" alt="semikFanPage"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -22,25 +26,32 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-</section>
-<!---------------------TextBox--------------------->
+</header>
 <section class="text-box">
-     <div class="text-box">
+    <div class="text-box">
         <h1>SemikFanPage</h1>
-         <h2>FanPage uživatele Semik</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Aliquam ut porttitor leo a diam sollicitudin. Nunc scelerisque viverra mauris in aliquam sem fringilla. Blandit volutpat maecenas volutpat blandit aliquam etiam.
-            Pulvinar etiam non quam lacus suspendisse faucibus. Eget nullam non nisi est sit amet facilisis. Varius duis at consectetur lorem donec.
-            Aenean pharetra magna ac placerat vestibulum lectus. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
-            Pretium quam vulputate dignissim suspendisse in est ante. At urna condimentum mattis pellentesque. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin.
-            In hendrerit gravida rutrum quisque non. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Diam sit amet nisl suscipit adipiscing bibendum.
-            Semper viverra nam libero justo laoreet sit amet cursus. Quis hendrerit dolor magna eget est lorem. Adipiscing diam donec adipiscing tristique risus.
-            A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Rhoncus dolor purus non enim praesent elementum.
+        <h2>FanPage uživatele Semik</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Aliquam ut porttitor leo a diam sollicitudin. Nunc scelerisque viverra mauris in aliquam sem fringilla.
+            Blandit volutpat maecenas volutpat blandit aliquam etiam.
+            Pulvinar etiam non quam lacus suspendisse faucibus. Eget nullam non nisi est sit amet facilisis. Varius duis
+            at consectetur lorem donec.
+            Aenean pharetra magna ac placerat vestibulum lectus. Aliquam malesuada bibendum arcu vitae elementum
+            curabitur vitae.
+            Pretium quam vulputate dignissim suspendisse in est ante. At urna condimentum mattis pellentesque. Nec
+            tincidunt praesent semper feugiat nibh sed pulvinar proin.
+            In hendrerit gravida rutrum quisque non. Ut faucibus pulvinar elementum integer enim neque volutpat ac
+            tincidunt. Diam sit amet nisl suscipit adipiscing bibendum.
+            Semper viverra nam libero justo laoreet sit amet cursus. Quis hendrerit dolor magna eget est lorem.
+            Adipiscing diam donec adipiscing tristique risus.
+            A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Rhoncus dolor purus non enim
+            praesent elementum.
         </p>
-            <a href="https://www.vse.cz/" class="hero-btn"><strong>Visit us for more</strong></a>
+        <a href="https://www.vse.cz/" class="hero-btn"><strong>Visit us for more</strong></a>
     </div>
 </section>
-<!---------------------characters--------------------->
+
 <section class="char">
     <a href="characters.html" class="char"><h1>Characters</h1></a>
     <div class="row">
@@ -50,16 +61,16 @@
                 <h3>LUCY</h3>
             </a>
         </div>
-      <div class="char-col">
-           <img src="./pictures/albedo.jpg " width="600" height="800" alt="albedo">
+        <div class="char-col">
+            <img src="./pictures/albedo.jpg " width="600" height="800" alt="albedo">
             <a href="albedo.html" class="layer">
                 <h3>ALBEDO</h3>
             </a>
         </div>
-         <div class="char-col">
+        <div class="char-col">
             <img src="./pictures/zero2.png" width="600" height="800" alt="zero2">
             <a href="zero2.html" class="layer">
-                 <h3>ZERO2</h3>
+                <h3>ZERO2</h3>
             </a>
         </div>
 
@@ -67,11 +78,11 @@
 
 </section>
 
-<!---------------------ENDP--------------------->
+
 <section class="endP">
     <a href="about.html" class="endP"><h4>About Us</h4></a>
-       <div class="icons">
-       <a target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook"></i></a>
+    <div class="icons">
+        <a target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook"></i></a>
         <a target="_blank" href="https://www.instagram.com/"> <i class="fa fa-instagram"></i></a>
         <a target="_blank" href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
         <a target="_blank" href="https://discord.com/"> <i class="fa fa-brands fa-discord"></i></a>
@@ -79,10 +90,12 @@
 </section>
 <script>
     var navLinks = document.getElementById("navLinks");
-    function showMenu(){
+
+    function showMenu() {
         navLinks.style.right = "0";
     }
-    function hideMenu(){
+
+    function hideMenu() {
         navLinks.style.right = "-200px";
     }
 </script>

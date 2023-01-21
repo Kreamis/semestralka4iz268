@@ -4,7 +4,7 @@
 
 }
 
-.header {
+header {
     min-height: 8vh;
     width: 100%;
     background-color: #04091EB2;
@@ -38,6 +38,9 @@ nav img {
     position: relative;
 
 }
+.nav-links ul li a.active {
+    color: #f44336;
+}
 
 .nav-links ul li a {
     color: white;
@@ -65,7 +68,7 @@ nav .fa {
 }
 
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
 
     .nav-links ul li {
         display: block;
@@ -209,15 +212,13 @@ Aplikace
     font-size: 10px;
 }
 
-.controls>input {
+.controls > input {
     width: 60%;
 }
 
-.controls>label {
+.controls > label {
     width: 30%;
 }
-
-
 
 
 .social-share-container {
@@ -249,9 +250,6 @@ Aplikace
 }
 
 
-
-
-
 .box-text h2 {
     padding: 1vh 10px;
     font-family: sans-serif;
@@ -259,20 +257,15 @@ Aplikace
 }
 
 
+.text-box {
 
-/*
-Aplikace2
-*/
-
-#imageContainer {
+    font-family: sans-serif;
     text-align: center;
+    margin-top: 5vh;
+
+
 }
 
-#previewImage {
-    border: 1px solid grey;
-    border-radius: 0.75rem;
-    width: 25vh;
-    height: 40vh;
-    margin: 10vh auto;
-
+.text-box h1 {
+    font-size: 62px;
 }

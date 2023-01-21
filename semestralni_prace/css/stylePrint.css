@@ -1,0 +1,79 @@
+body {
+    background: white;
+}
+
+header {
+    display: none;
+}
+
+section.text-box h1, section.text-box h2, section.text-box p {
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.hero-btn, .endP {
+    display: none;
+}
+
+section.char, section.endP {
+    display: none;
+}
+
+.waifus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    font-family: sans-serif;
+}
+
+
+
+
+.waifus-col {
+    flex-basis: 20%;
+    border-radius: 10px;
+    margin: 5%;
+    text-align: left;
+}
+
+.waifus-col img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+
+
+}.row {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+
+.contentColumns {
+    padding-top: 5vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    text-align: center;
+    font-family: sans-serif;
+
+
+}
+.list-without-dots-lmao {
+    list-style: none;
+    display: none !important;
+}
+.icons{
+    display: none;
+}
+
+.box-minor{
+    display: none;
+}
+.box-main{
+    border: none;
+    box-shadow: none;
+}

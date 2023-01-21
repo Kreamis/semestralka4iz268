@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Ichika</title>
+    <meta name="description" content="Stránka o Ichice">
+    <meta name="author" content="Michal Ševčík">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="print" href="./css/stylePrint.css">
     <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./pictures/logo.png">
 </head>
 <body>
-<section class="header">
+<header>
     <nav>
         <a href="index.html"><img src="./pictures/Nadpis.png" alt="semikFanPage"></a>
         <div class="nav-links" id="navLinks">
@@ -22,7 +26,7 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-</section>
+</header>
 <section class="title">
     <h1>Ichika</h1>
 </section>
@@ -91,11 +95,10 @@
         </section>
     </main>
     <aside>
-        <section>
-            <img src="https://i.pinimg.com/originals/89/c2/23/89c223bccd014608cfffc58e755ed489.jpg" width=200px
-                 alt="ichika">
-        </section>
-        <section class="asideText">
+        <div>
+            <img class="waifusImg" src="https://i.pinimg.com/originals/89/c2/23/89c223bccd014608cfffc58e755ed489.jpg" alt="ichika">
+        </div>
+        <div class="asideText">
             <table class="asideTable">
                 <tbody>
                 <tr>
@@ -121,11 +124,11 @@
                 </tbody>
             </table>
 
-        </section>
+        </div>
     </aside>
 </div>
 
-<!---------------------ENDP--------------------->
+
 
 <section class="endP">
     <a href="about.html" class="endP"><h4>About Us</h4></a>

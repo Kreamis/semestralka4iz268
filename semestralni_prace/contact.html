@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
-    <link  rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="Stránka s kontaktem na autora">
+    <meta name="author" content="Michal Ševčík">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="print" href="./css/stylePrint.css">
     <script src="https://kit.fontawesome.com/d1193ad1ea.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./pictures/logo.png">
 </head>
 <body>
-<section class="header">
+<header>
     <nav>
         <a href="index.html"><img src="./pictures/Nadpis.png" alt="semikFanPage"></a>
         <div class="nav-links" id="navLinks">
@@ -16,17 +20,19 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="characters.html">Characters</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
                 <li><a href="aplikace.html">ImgToASCII</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-</section>
-<!---------------------TextBox--------------------->
+</header>
+<div class="text-box">
+<h1>Contact</h1>
+</div>
 <section class="text-box">
     <div class="text-box">
-        <h1>Contact</h1>
+
         <h2>Jak nás můžete kontaktovat</h2>
         <p>Pro kontak s majitelem této stránky využíjte prosím telefoní číslo: +420 69 69 69 420</p>
         <p>Pokus o jaké koliv kontaktování bude ignorováno</p>
@@ -35,17 +41,25 @@
 <section class="text-box">
     <div class="text-box">
         <h2>Případné právní závazky</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Aliquam ut porttitor leo a diam sollicitudin. Nunc scelerisque viverra mauris in aliquam sem fringilla. Blandit volutpat maecenas volutpat blandit aliquam etiam.
-            Pulvinar etiam non quam lacus suspendisse faucibus. Eget nullam non nisi est sit amet facilisis. Varius duis at consectetur lorem donec.
-            Aenean pharetra magna ac placerat vestibulum lectus. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
-            Pretium quam vulputate dignissim suspendisse in est ante. At urna condimentum mattis pellentesque. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin.
-            In hendrerit gravida rutrum quisque non. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Diam sit amet nisl suscipit adipiscing bibendum.
-            Semper viverra nam libero justo laoreet sit amet cursus. Quis hendrerit dolor magna eget est lorem. Adipiscing diam donec adipiscing tristique risus.
-            A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Rhoncus dolor purus non enim praesent elementum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+            Aliquam ut porttitor leo a diam sollicitudin. Nunc scelerisque viverra mauris in aliquam sem fringilla.
+            Blandit volutpat maecenas volutpat blandit aliquam etiam.
+            Pulvinar etiam non quam lacus suspendisse faucibus. Eget nullam non nisi est sit amet facilisis. Varius duis
+            at consectetur lorem donec.
+            Aenean pharetra magna ac placerat vestibulum lectus. Aliquam malesuada bibendum arcu vitae elementum
+            curabitur vitae.
+            Pretium quam vulputate dignissim suspendisse in est ante. At urna condimentum mattis pellentesque. Nec
+            tincidunt praesent semper feugiat nibh sed pulvinar proin.
+            In hendrerit gravida rutrum quisque non. Ut faucibus pulvinar elementum integer enim neque volutpat ac
+            tincidunt. Diam sit amet nisl suscipit adipiscing bibendum.
+            Semper viverra nam libero justo laoreet sit amet cursus. Quis hendrerit dolor magna eget est lorem.
+            Adipiscing diam donec adipiscing tristique risus.
+            A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Rhoncus dolor purus non enim
+            praesent elementum.</p>
     </div>
 </section>
-<!---------------------ENDP--------------------->
+
 <section class="endP">
     <a href="about.html" class="endP"><h4>About Us</h4></a>
     <div class="icons">
@@ -57,10 +71,12 @@
 </section>
 <script>
     var navLinks = document.getElementById("navLinks");
-    function showMenu(){
+
+    function showMenu() {
         navLinks.style.right = "0";
     }
-    function hideMenu(){
+
+    function hideMenu() {
         navLinks.style.right = "-200px";
     }
 </script>

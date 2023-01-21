@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.header {
+
+header {
     min-height: 8vh;
     width: 100%;
     background-color: #04091EB2;
@@ -10,34 +11,44 @@
     background-size: cover;
     position: relative;
 }
-nav{
+
+nav {
     display: flex;
     padding: 2% 2%;
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
 }
-nav img{
+
+nav img {
     width: 400px;
 
 }
-.nav-links{
+
+.nav-links {
     flex: 1;
     text-align: right;
 }
-.nav-links ul li{
+
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: white;
     text-decoration: none;
     font-size: 26px;
 }
-.nav-links ul li::after{
+
+.nav-links ul li a.active {
+    color: #f44336;
+}
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -46,21 +57,26 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
-.text-box{
-    min-height: 55vh;
+
+.text-box {
+
     font-family: sans-serif;
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
 
 }
-.text-box h1{
+
+.text-box h1 {
     font-size: 62px;
 }
-.text-box p{
+
+.text-box p {
     display: block;
     align-content: center;
     text-align: center;
@@ -72,36 +88,41 @@ nav img{
     padding-right: 20vh;
 
 
-
 }
-.hero-btn{
+
+.hero-btn {
     text-decoration: none;
     color: rgb(0, 0, 0);
     border: 1px solid #000000;
     font-size: 16px;
     padding: 12px 34px;
     background: transparent;
+    border-radius: 0.75rem;
 
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
     border: 1px solid black;
     background: #f44336;
     transition: 1s;
+    border-radius: 0.75rem;
 }
 
-nav .fa{
+nav .fa {
     display: none;
 }
 
 
-@media(max-width: 800px){
-    .text-box h1{
+@media (max-width: 800px) {
+    .text-box h1 {
         font-size: 20px;
     }
-    .nav-links ul li{
+
+    .nav-links ul li {
         display: block;
     }
-    .nav-links{
+
+    .nav-links {
         position: absolute;
         background: #f44336;
         height: 100vh;
@@ -111,8 +132,10 @@ nav .fa{
         text-align: left;
         z-index: 2;
         transition: 1s;
+        border-radius: 0.75rem;
     }
-    nav .fa{
+
+    nav .fa {
         display: block;
         color: white;
         margin: 10px;
@@ -120,79 +143,83 @@ nav .fa{
         cursor: pointer;
 
     }
-    .nav-links ul{
+
+    .nav-links ul {
         padding: 30px;
     }
 }
-.info{
+
+.info {
     width: 60%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+
     position: relative;
 
 
-
 }
-h1{
+
+h1 {
     font-size: 36px;
     font-weight: 600;
+    font-family: sans-serif;
+    align-items: center;
 }
-p{
+
+p {
     color: black;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.row.right {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-}
-.info-col{
+
+
+
+.info-col {
     flex-basis: 42%;
     background-color: #f44336;
-    border-radius: 10px;
     margin-bottom: 10%;
     padding: 100px 12px;
     box-sizing: border-box;
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
+    border-radius: 0.75rem;
 
 
 }
 
-.info-col h3{
+.info-col h3 {
     font-family: sans-serif;
     color: white;
 
 }
-.text.left{
+
+.text.left {
     text-align: left;
 }
 
 
-
-
-
-
-.info-col:hover{
-    box-shadow: 0 0 30px 0px rgba(0,0,0,0.5);
+.info-col:hover {
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5);
 }
-@media(max-width:800px){
-    .row{
+
+@media (max-width: 800px) {
+    .row {
         flex-direction: column;
     }
 
 }
 
-.char{
+.char {
     width: 80%;
     margin: auto;
     text-align: center;
@@ -204,7 +231,7 @@ p{
 }
 
 
-.char-col{
+.char-col {
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -213,7 +240,8 @@ p{
     cursor: pointer;
 
 }
-.char-col img{
+
+.char-col img {
     width: 100%;
     height: 100%;
     display: block;
@@ -223,10 +251,12 @@ p{
     list-style: none;
 
 }
-.list-without-dots-lmao a{
+
+.list-without-dots-lmao a {
     text-decoration: none;
 }
-.layer{
+
+.layer {
     display: inline;
     height: 100%;
     width: 100%;
@@ -235,11 +265,13 @@ p{
     left: 0;
     transition: 0.5s;
 }
-.layer:hover{
-    background: rgba(226,0,0,0.7);
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
 
 }
-.layer h3{
+
+.layer h3 {
     width: 100%;
     font-weight: 500;
     color: white;
@@ -249,51 +281,67 @@ p{
     transform: translateX(-50%);
     position: absolute;
 }
-.layer:hover h3{
+
+.layer:hover h3 {
     bottom: 49%;
     opacity: 1;
     transition: 0.5s;
 
 }
-.waifus{
+
+.waifus {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 30px;
+
     font-family: sans-serif;
 }
-.waifus h1{
+
+.waifus h1 {
     margin-bottom: 10vh;
 
 }
-.waifus-col{
+
+.waifusImg{
+    width: 200px;
+}
+
+.aboutImg{
+    width: 220px;
+}
+
+.waifus-col {
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
 }
-.waifus-col img{
-    width: 400px;
-    height: 300px;
+
+.waifus-col img {
+    width: 380px;
+    height: 285px;
     border-radius: 10px;
 
 }
-.waifus-page img{
+
+.waifus-page img {
     width: 400px;
     height: 300px;
     margin-left: auto;
 }
-.waifus-col p{
+
+.waifus-col p {
     padding: 0;
 }
-.waifus-col h3{
+
+.waifus-col h3 {
     margin-top: 16px;
     margin-bottom: 15px;
     text-align: left;
 
 }
 
-.endP{
+.endP {
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -303,14 +351,16 @@ p{
     text-decoration: none;
     margin-top: 10vh;
 }
-.endP h4{
+
+.endP h4 {
     margin-bottom: 10px;
     margin-top: 10px;
     font-weight: 600;
     color: #fff;
 
 }
-.icons .fa{
+
+.icons .fa {
     color: #f44336;
     margin: 0 20px;
     cursor: pointer;
@@ -319,6 +369,7 @@ p{
 
 
 }
+
 .title {
     text-align: center;
     margin: 2vh 0;
@@ -350,48 +401,50 @@ table.asideTable td {
 
 }
 
-.container{
+.container {
 
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
     background-color: rgba(255, 255, 255, 0.6);
 
 }
 
 
-.container h2{
+.container h2 {
     text-align: center;
     margin-top: 5vh;
 
 }
-.container h5{
+
+.container h5 {
     padding: 10px;
     font-size: 20px;
 
 }
-.container main p{
+
+.container main p {
     text-align: left;
 
     padding: 0 20px;
 }
-.container main{
+
+.container main {
 
     display: flex;
-    flex-flow:column nowrap;
-    flex:4;
+    flex-flow: column nowrap;
+    flex: 4;
     margin-left: 5vh;
     font-family: sans-serif;
 
 }
 
-    .container aside{
-    display:flex;
+.container aside {
+    display: flex;
     font-family: sans-serif;
 
 
-
-    flex-flow:column nowrap;
-    flex:1;
+    flex-flow: column nowrap;
+    flex: 1;
     background-color: rgba(211, 211, 211, 0.46);
     padding: 10px;
     border: 1px solid #a2a9b1;
@@ -400,24 +453,27 @@ table.asideTable td {
     margin-left: 5px;
 
 }
+
 .container aside section {
 
     display: block;
     margin: 0 auto;
 
 }
-.container aside img{
+
+.container aside img {
     display: block;
     border-radius: 10%;
 
     margin: 0 auto;
 }
+
 .container main ul {
     width: 25%;
     display: flex;
     border: 1px solid #a2a9b1;
     background-color: #f8f9fa;
-   padding: 10px;
+    padding: 10px;
     margin-left: 5vh;
     flex-direction: column;
     font-family: sans-serif;
@@ -425,99 +481,107 @@ table.asideTable td {
     margin-top: 2vh;
 
 
-
 }
 
- .about h2{
-     display: block;
+.about h2 {
+    display: block;
     text-align: center;
-     font-family: sans-serif;
-     font-size: 40px;
+    font-family: sans-serif;
+    font-size: 40px;
 
 
 }
-.contentColumns{
+
+.contentColumns {
     padding-top: 5vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     text-align: center;
-
-
+    font-family: sans-serif;
 
 
 }
 
-.contentColumns .contentColumn figure{
+.contentColumns .contentColumn figure {
     display: flex;
     flex-direction: column;
     padding-top: 4vh;
 
 
-
 }
-.contentColumns .contentColumn .imgC img{
+
+.contentColumns .contentColumn .imgC img {
     border-radius: 50px;
     width: 40%;
     margin: auto;
 }
-@media(max-width: 800px) {
+
+@media (max-width: 800px) {
     .contentColumns {
         flex-flow: column-reverse nowrap;
     }
-    .contentColumns .contentColumn .imgC img{
+
+    .contentColumns .contentColumn .imgC img {
         display: flex;
         flex-direction: column;
         margin: auto;
     }
 
 
+    .container main ul a {
 
-.container main ul a{
+        color: #001844;
 
-    color: #001844;
-
-    text-decoration: none  !important;
-    cursor: pointer;
-    font-family: sans-serif;
-
-
-}
-.container main h5{
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    font-family: sans-serif;
-    font-size: 30px;
-    border-bottom: 2px solid ;
-
-}
-.container .asideText p{
-    width: 100%;
-    color: #000;
-    border-bottom: 2px solid black;
-    margin: 0 auto;
-}
-@media(max-width: 800px) {
-    .container {
-        flex-flow: column-reverse nowrap;
-    }
-    .container main p{
-        text-align: center;}
-    .container main ul{
-        width: 80%;
-
-    }
-    .container main ul a{
-
-        text-align: center  ;
+        text-decoration: none !important;
+        cursor: pointer;
+        font-family: sans-serif;
 
 
     }
-    .container main h5{
 
-        text-align: center  ;
-
+    .container main h5 {
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        font-family: sans-serif;
+        font-size: 30px;
+        border-bottom: 2px solid;
 
     }
-}
+
+    .container .asideText p {
+        width: 100%;
+        color: #000;
+        border-bottom: 2px solid black;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 800px) {
+        .container {
+            flex-flow: column-reverse nowrap;
+        }
+
+        .container main p {
+            text-align: center;
+        }
+
+        .container main ul {
+            width: 80%;
+
+        }
+
+        .container main ul a {
+
+            text-align: center;
+
+
+        }
+
+        .container main h5 {
+
+            text-align: center;
+
+
+        }
+    }
 }

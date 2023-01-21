@@ -8,6 +8,7 @@ class Cell {
         this.symbol = symbol;
         this.color = color;
     }
+
     draw(ctx) {
         ctx.fillStyle = this.color;
         ctx.fillText(this.symbol, this.x, this.y)
@@ -63,12 +64,14 @@ class AsciiEffect {
         console.log(this._imageCellArray);
 
     }
+
     _drawAscii() {
         this._ctx.clearRect(0, 0, this._width, this._height)
         for (let i = 0; i < this._imageCellArray.length; i++) {
             this._imageCellArray[i].draw(this._ctx);
         }
     }
+
     draw(cellSize) {
         this._scanImage(cellSize);
         this._drawAscii()
@@ -92,7 +95,7 @@ const fileInput = document.getElementById("fileInput");
 fileInput.addEventListener("change", (event) => {
     const file = event.target.files[0];
 
-    if (file.size > 5_000_000)  {
+    if (file.size > 5_000_000) {
         window.alert("File too big 😩");
         return;
     }
@@ -113,8 +116,7 @@ fileInput.addEventListener("change", (event) => {
             if (image.width >= image.height) {
                 canvas.width = size;
                 canvas.height = size * (image.height / image.width);
-            }
-            else {
+            } else {
 
                 canvas.height = size;
                 canvas.width = size * (image.width / image.height);
@@ -152,7 +154,7 @@ const upload = (canvas, onUpload) => {
 
         form.append("file", file);
 
-        fetch("https://api.file.coffee/file/upload", { method: "post", body: form })
+        fetch("https://api.file.coffee/file/upload", {method: "post", body: form})
             .then(response => response.json())
             .then(response => onUpload(response.url));
     });
