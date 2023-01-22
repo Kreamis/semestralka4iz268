@@ -269,3 +269,6 @@ Aplikace
 .text-box h1 {
     font-size: 62px;
 }
+.box-minor h2{
+    padding-top: 5vh;
+}
